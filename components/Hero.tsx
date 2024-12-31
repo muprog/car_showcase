@@ -8,7 +8,7 @@ export default function Hero() {
  
   return (
     <main className="hero">
-      <div className="flex-1 padding-x">
+      <div className="flex-1 pt-16">
         <h1 className="hero__title">
             Find, book, or rent a car - quickly and easily!
         </h1>
@@ -26,8 +26,9 @@ export default function Hero() {
 <div className="hero__image">
   <Image src={'/hero.png'} alt="hero"
   fill className="object-contain"/>
-  <div className="hero__image-overlay"/>
-</div>
+   <div className="hero__image-overlay"/>
+  </div>
+
       </div>
     </main>
   )
