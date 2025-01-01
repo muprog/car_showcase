@@ -28,7 +28,7 @@ if(searchManufacturer==='' && searchModel===''){
   return alert('please fill in the search bar')
 }
 setModel(searchModel)
-setSearchManufacturer(searchManufacturer)
+setManufacturer(searchManufacturer)
     }
 
 

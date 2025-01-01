@@ -25,8 +25,10 @@ export default  function Home() {
 
  const [limit,setLimit]=useState(10);
 
+
+
  const getCars=async () =>{
-  setLoading(true)
+  setLoading(true);
   try {
     const result=await fetchCars({
       manufacturer:manufacturer ||'',
@@ -48,7 +50,7 @@ getCars();
  },[fuel,year,limit,manufacturer,model])
 
  
-  const isDataEmpty=!Array.isArray(allCars)||allCars.length<1||!allCars;
+  // const isDataEmpty=!Array.isArray(allCars)||allCars.length<1||!allCars;
 
   return ( 
   <main className="overflow-hidden">
