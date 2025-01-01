@@ -34,7 +34,7 @@ export default  function Home() {
       manufacturer:manufacturer ||'',
       year:year ||2024,
       fuel:fuel ||'',
-      limit:limit ||11,
+      limit:limit ||10,
       model:model||''
     });
     setAllcars(result);
