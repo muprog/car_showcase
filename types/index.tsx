@@ -6,7 +6,7 @@ export interface customButtonProps{
     handleClick?:MouseEventHandler<HTMLButtonElement>,
     btnType?:"button"|"submit",
     textStyles?:string,
-    rightIcon:string
+    rightIcon?:string
 }
 export interface optionProps{
     title:string,
@@ -14,11 +14,12 @@ export interface optionProps{
 }
 export interface customFilterProps{
     title:string,
-    options:optionProps[]
+    options:optionProps[],
+    setFilter: Dispatch<SetStateAction<any>>
 }
 export interface searchManufacturerProps{
-    manufacturer:string,
-    setManufacturer:(value: string) => void;
+    selected:string,
+    setSelected:(value: string) => void;
 }
 
 export interface carsProps{
@@ -49,4 +50,14 @@ export interface FilterProps{
 }
 export interface HomeProps{
     searchParams:FilterProps
+}
+export interface showMoreProps{
+    pageNumber:number,
+    isNext:boolean,
+    setLimit:Dispatch<SetStateAction<number>>
+}
+
+export interface SearchBarProps{
+    setModel:Dispatch<SetStateAction<string>>,
+    setManufacturer:Dispatch<SetStateAction<string>>
 }

@@ -7,14 +7,10 @@ import { useRouter } from 'next/navigation'
 import { Listbox,ListboxButton,ListboxOption,ListboxOptions,Transition } from '@headlessui/react'
 import { updateSearchParams } from '@/utilis'
 
-export default function CustomFilter({title,options}:customFilterProps) {
+export default function CustomFilter({title,options,setFilter}:customFilterProps) {
   const router=useRouter();
   const [selected,setSelected]=useState(options[0])
-const handleUpdateParams=(e:{title:string,value:string})=>{
-   const newPathName=updateSearchParams(title,e.value.toLowerCase());
- 
-router.push(newPathName);
-}
+
 
   return (
     <div className='w-fit'>
@@ -22,7 +18,7 @@ router.push(newPathName);
       value={selected}
       onChange={e=>{
         setSelected(e)
-      handleUpdateParams(e)
+      setFilter(e.value)
       }}
       >
         <div className='relative w-fit z-10'>
