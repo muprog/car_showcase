@@ -79,7 +79,7 @@ setFilter={setYear}
 />
   </div>
 </div>
-{allCars.length>0?(
+{allCars?.length>0?(
 <section>
   <div className="home__cars-wrapper">
     {allCars?.map(car=><CarCard car={car} key={allCars.indexOf(car)}/>)}

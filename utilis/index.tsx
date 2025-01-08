@@ -5,10 +5,11 @@ import { manufacturers } from "@/constants";
 export async function fetchCars(filters:FilterProps) {
     try {
         const {manufacturer,year,model,limit,fuel}=filters
-        const response=await axios.get(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`,{
+        const response=await axios.get(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`
+            ,{
             headers:{
                 'x-rapidapi-host': 'cars-by-api-ninjas.p.rapidapi.com',
-                'x-rapidapi-key': '8527dff085msh77e8cd742bf2e8fp1ea95fjsnfcbc6627c32a',
+                'x-rapidapi-key': 'b7b9da467fmsh5013d127b18d6ecp188376jsn7a5da710bbce',
                 "Content-Type":"application/json"
                    }
 
